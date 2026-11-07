@@ -1,9 +1,10 @@
 # 開発の進め方
 
-作業で守る決まり（原則、AI の裁量、質問の出し方）は、ルールとして [.claude/rules/](../.claude/rules/) に置いています。この文書には、プロジェクト全体の進め方を書きます。
+作業で守る決まりはルール（[.claude/rules/](../.claude/rules/)）に、場面ごとの手順はスキル（[.claude/skills/](../.claude/skills/)）に置いています。この文書には、プロジェクト全体の進め方を書きます。
 
-- 汎用のルール：[general/working.md](../.claude/rules/general/working.md)（原則）、[general/autonomy.md](../.claude/rules/general/autonomy.md)（AI の裁量、質問の出し方）、[general/rules.md](../.claude/rules/general/rules.md)（ルールの置き方）
+- 汎用のルール：[general/working.md](../.claude/rules/general/working.md)（原則）、[general/autonomy.md](../.claude/rules/general/autonomy.md)（AI の裁量、質問の出し方）、[general/rules-and-skills.md](../.claude/rules/general/rules-and-skills.md)（ルールとスキルの置き方）
 - qata 固有のルール：[qata/repos-and-contracts.md](../.claude/rules/qata/repos-and-contracts.md)
+- 汎用のスキル：[session-start](../.claude/skills/session-start/SKILL.md)、[session-end](../.claude/skills/session-end/SKILL.md)
 
 ## 順番
 
@@ -27,7 +28,7 @@
 ## ルールの改定
 
 - 人が関門をすり抜けた問題を見つけたら、それをルールや関門に落とす。
-- 落とすときは、汎用か qata 固有かを決めて置く（[general/rules.md](../.claude/rules/general/rules.md)）。
+- 落とすときは、ルールかスキルか、汎用か qata 固有かを決めて置く（[general/rules-and-skills.md](../.claude/rules/general/rules-and-skills.md)）。
 - ルールを AI が自分で見直して改善する仕組みは、今回のスコープ外です（[scope.md](scope.md)）。
 
 ## 振り返り

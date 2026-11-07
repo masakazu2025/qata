@@ -1,8 +1,12 @@
 # qata（親リポジトリ）
 
-このリポジトリは、目的・スコープ・契約・共通の作り方を置く親です。コードは置きません。
+Windows のデスクトップアプリに対して、日本語の手順からテストを作り、自動で再生し、結果を確認するツール qata の親リポジトリです。目的・スコープ・契約・共通の作り方を置きます。コードは置きません。
 
-- 作業の前に [docs/scope.md](docs/scope.md) と [docs/log.md](docs/log.md) を読む。
-- 作業の決まりは [.claude/rules/](.claude/rules/) にある。
-  - [general/](.claude/rules/general/)：どのプロジェクトでも使える決まり
-  - [qata/](.claude/rules/qata/)：qata だけの決まり
+- 概要：[README.md](README.md)
+- スコープ：[docs/scope.md](docs/scope.md)
+- 構成と契約：[docs/architecture.md](docs/architecture.md)
+- 進め方：[docs/process.md](docs/process.md)
+- 決めたこと：[docs/decisions.md](docs/decisions.md)
+- 作業の記録：[docs/log.md](docs/log.md)
+- ルール：[.claude/rules/](.claude/rules/)（[general/](.claude/rules/general/) は汎用、[qata/](.claude/rules/qata/) は固有）
+- スキル：[.claude/skills/](.claude/skills/)
