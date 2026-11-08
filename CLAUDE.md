@@ -11,5 +11,6 @@ Windows のデスクトップアプリに対して、日本語の手順からテ
 - 改善案：[docs/ideas.md](docs/ideas.md)
 - 決めたこと：[docs/decisions.md](docs/decisions.md)
 - 作業の記録：[docs/log.md](docs/log.md)
+- 振り返り：[docs/retro.md](docs/retro.md)
 - ルール：[.claude/rules/](.claude/rules/)（[general/](.claude/rules/general/) は汎用、[qata/](.claude/rules/qata/) は固有）
 - スキル：[.claude/skills/](.claude/skills/)
