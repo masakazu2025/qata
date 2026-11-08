@@ -13,9 +13,8 @@
 1. **偽物を本物に置き換え、デモを完了させる**　担当：AI
    - [process.md](process.md) の「順番」の 3。Claude から MCP で頼むデモを通す。置き換えるたびに、端から端までのテストが通り続けることを関門にする。
    - ここから、関門をすり抜けて、あとで見つかった問題を数える（[retro.md](retro.md)）。
-   - 段取り（runner の本物の操作と、server の電卓の辞書は済み。qata-runner の R3、qata-server の S8）：
-     1. **web：端から端までのテストを本物の runner でも回せるようにする。** runner を `QATA_RUNNER_OPERATOR=windows` で立ち上げる切り替え（手元だけ。CI はデスクトップがないので偽物のまま）。
-     2. **全体：Claude Code から MCP で頼むデモを通す。** 本物の電卓が動き、web で結果とスクショを見るところまで。人に画面で見てもらう。
+   - 段取り（runner の本物の操作、server の電卓の辞書、web の端から端までのテストを本物の runner で回す切り替え（`npm run e2e:windows`）は済み。qata-runner の R3、qata-server の S8、qata-web の W5）：
+     1. **全体：Claude Code から MCP で頼むデモを通す。** 本物の電卓が動き、web で結果とスクショを見るところまで。人に画面で見てもらう。
 2. **書き方を縛るもの（規約・パターン・雛形）を決める**　担当：AI（案）・人
    - 1 で実際に困ったことから決める（[ideas.md](ideas.md)）。
 
