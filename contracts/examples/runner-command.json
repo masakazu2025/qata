@@ -1,0 +1,46 @@
+{
+  "run_id": "run_1",
+  "app": {
+    "launch": {
+      "command": "calc.exe"
+    },
+    "window": {
+      "title": "電卓",
+      "size": {
+        "width": 320,
+        "height": 500
+      }
+    }
+  },
+  "screenshot": {
+    "scope": "window"
+  },
+  "steps": [
+    {
+      "type": "key",
+      "key": "1"
+    },
+    {
+      "type": "tap",
+      "point": {
+        "x": 290,
+        "y": 400
+      }
+    },
+    {
+      "type": "key",
+      "key": "2"
+    },
+    {
+      "type": "key",
+      "key": "="
+    },
+    {
+      "type": "read_text",
+      "source": {
+        "method": "uia",
+        "automation_id": "CalculatorResults"
+      }
+    }
+  ]
+}

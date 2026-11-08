@@ -1,0 +1,244 @@
+openapi: 3.1.0
+info:
+  title: qata-server API
+  version: 0.1.0
+  description: >-
+    web が使う server の REST API。形は schemas/ の JSON Schema を参照する。
+    この文書が正で、web はここから型を生成する。server は、FastAPI が出す OpenAPI がこれと合うことをテストで確かめる。
+paths:
+  /apps:
+    get:
+      operationId: listApps
+      summary: 登録されているアプリ（部品の辞書）の一覧
+      responses:
+        "200":
+          description: 一覧
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "schemas/server.schema.json#/$defs/app_summary"
+  /apps/{app_id}/parts:
+    get:
+      operationId: getPartDictionary
+      summary: アプリの部品の辞書
+      parameters:
+        - $ref: "#/components/parameters/app_id"
+      responses:
+        "200":
+          description: 部品の辞書
+          content:
+            application/json:
+              schema:
+                $ref: "schemas/part-dictionary.schema.json"
+        "404":
+          $ref: "#/components/responses/not_found"
+  /testcases/validate:
+    post:
+      operationId: validateTestcase
+      summary: テストケースを登録せずに検証する
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "schemas/testcase.schema.json"
+      responses:
+        "200":
+          description: 検証の結果（問題があっても 200 で返す）
+          content:
+            application/json:
+              schema:
+                $ref: "schemas/server.schema.json#/$defs/validation_result"
+  /testcases:
+    get:
+      operationId: listTestcases
+      summary: 登録されたテストケースの一覧（新しい順）
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            $ref: "schemas/common.schema.json#/$defs/app_id"
+      responses:
+        "200":
+          description: 一覧
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "schemas/server.schema.json#/$defs/testcase_record"
+    post:
+      operationId: registerTestcase
+      summary: テストケースを検証して登録する
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "schemas/testcase.schema.json"
+      responses:
+        "201":
+          description: 登録した
+          content:
+            application/json:
+              schema:
+                $ref: "schemas/server.schema.json#/$defs/testcase_record"
+        "422":
+          description: 検証を通らなかった（登録しない）
+          content:
+            application/json:
+              schema:
+                $ref: "schemas/server.schema.json#/$defs/validation_result"
+  /testcases/{testcase_id}:
+    parameters:
+      - $ref: "#/components/parameters/testcase_id"
+    get:
+      operationId: getTestcase
+      summary: テストケース一つ
+      responses:
+        "200":
+          description: テストケース
+          content:
+            application/json:
+              schema:
+                $ref: "schemas/server.schema.json#/$defs/testcase_record"
+        "404":
+          $ref: "#/components/responses/not_found"
+    delete:
+      operationId: deleteTestcase
+      summary: テストケースを消す（実行の結果は残す）
+      responses:
+        "204":
+          description: 消した
+        "404":
+          $ref: "#/components/responses/not_found"
+  /testcases/{testcase_id}/approve:
+    parameters:
+      - $ref: "#/components/parameters/testcase_id"
+    post:
+      operationId: approveTestcase
+      summary: 人がテストケースを承認する（review_status を approved にする）
+      responses:
+        "200":
+          description: 承認した
+          content:
+            application/json:
+              schema:
+                $ref: "schemas/server.schema.json#/$defs/testcase_record"
+        "404":
+          $ref: "#/components/responses/not_found"
+        "409":
+          description: 確認の要らないテストケースだった（review_status が not_required）
+          content:
+            application/json:
+              schema:
+                $ref: "schemas/server.schema.json#/$defs/error_response"
+  /testcases/{testcase_id}/runs:
+    parameters:
+      - $ref: "#/components/parameters/testcase_id"
+    post:
+      operationId: runTestcase
+      summary: テストケースを実行する。実行が終わるまで待って結果を返す
+      responses:
+        "201":
+          description: 実行した（結果が failed・error でも 201）
+          content:
+            application/json:
+              schema:
+                $ref: "schemas/server.schema.json#/$defs/run"
+        "404":
+          $ref: "#/components/responses/not_found"
+        "409":
+          description: 人の確認待ち（review_status が pending）で実行できない
+          content:
+            application/json:
+              schema:
+                $ref: "schemas/server.schema.json#/$defs/error_response"
+        "502":
+          description: runner に届かない
+          content:
+            application/json:
+              schema:
+                $ref: "schemas/server.schema.json#/$defs/error_response"
+  /runs:
+    get:
+      operationId: listRuns
+      summary: 実行の結果の一覧（新しい順）
+      parameters:
+        - name: testcase_id
+          in: query
+          required: false
+          schema:
+            $ref: "schemas/common.schema.json#/$defs/id"
+      responses:
+        "200":
+          description: 一覧
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "schemas/server.schema.json#/$defs/run"
+  /runs/{run_id}:
+    get:
+      operationId: getRun
+      summary: 実行の結果一つ
+      parameters:
+        - name: run_id
+          in: path
+          required: true
+          schema:
+            $ref: "schemas/common.schema.json#/$defs/id"
+      responses:
+        "200":
+          description: 実行の結果
+          content:
+            application/json:
+              schema:
+                $ref: "schemas/server.schema.json#/$defs/run"
+        "404":
+          $ref: "#/components/responses/not_found"
+  /screenshots/{screenshot_id}:
+    get:
+      operationId: getScreenshot
+      summary: スクショの PNG
+      parameters:
+        - name: screenshot_id
+          in: path
+          required: true
+          schema:
+            $ref: "schemas/common.schema.json#/$defs/id"
+      responses:
+        "200":
+          description: PNG
+          content:
+            image/png:
+              schema:
+                type: string
+                contentMediaType: image/png
+        "404":
+          $ref: "#/components/responses/not_found"
+components:
+  parameters:
+    app_id:
+      name: app_id
+      in: path
+      required: true
+      schema:
+        $ref: "schemas/common.schema.json#/$defs/app_id"
+    testcase_id:
+      name: testcase_id
+      in: path
+      required: true
+      schema:
+        $ref: "schemas/common.schema.json#/$defs/id"
+  responses:
+    not_found:
+      description: 見つからない
+      content:
+        application/json:
+          schema:
+            $ref: "schemas/server.schema.json#/$defs/error_response"
