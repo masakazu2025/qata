@@ -9,6 +9,41 @@ AI や人が決めたことと、その理由を残します。人はここを�
 
 ---
 
+## D33. CI の最低限の形
+
+- 決めた人：AI　レビュー：未（人のレビューは要らない。PoC が終わったときにまとめて振り返る、D25）
+
+```mermaid
+flowchart LR
+  subgraph S["qata-server（ubuntu）"]
+    s1[pytest・ruff]
+  end
+  subgraph R["qata-runner（Windows）"]
+    r1[pytest・ruff]
+  end
+  subgraph W["qata-web"]
+    w1["check（ubuntu）<br>型・vitest・prettier"]
+    w2["e2e（Windows）<br>Playwright"]
+  end
+  P[(親 qata の main)] -->|QATA_PARENT_DIR| s1 & r1 & w1 & w2
+  SM[(qata-server の main)] --> w2
+  RM[(qata-runner の main)] --> w2
+```
+
+| 部品 | ジョブ（必須のチェック） | 実行環境 | 回すもの |
+| --- | --- | --- | --- |
+| qata-server | `test` | ubuntu | `uv run pytest`・`ruff check`・`ruff format --check` |
+| qata-runner | `test` | Windows | 同じ |
+| qata-web | `check` | ubuntu | `npm run check` |
+| qata-web | `e2e` | Windows | `npm run e2e`（隣に qata-server・qata-runner の main） |
+
+- 各部品の `.github/workflows/ci.yml`。pull request と main への push で回す。
+- 親の場所は、環境変数 `QATA_PARENT_DIR` で親のリポジトリを指す。指していなければ、いまどおり `../qata`。CI では親を `parent/` という名前で取ってきて、環境変数が効いていることも確かめる（`../qata` には何もない）。
+- server は依存が OS によらないので ubuntu（速い）。runner と、runner を立ち上げる web の e2e は Windows（runner は Windows で動く）。
+- ブランチの保護は、main で上のチェックが通ることを必須にし、管理者にも効かせる。レビューの承認は必須にしない（マージの前の人の一言は、セッションの中で続ける）。
+- 部品をまたぐ変更は、web の e2e が server・runner の main を使うので、server・runner を先にマージする。
+- 理由：tasks.md の「CI を最低限で入れる」（D30）。速さと、runner が Windows で動くことの兼ね合い。
+
 ## D32. 現場の知識を書くか判断がつかないときは、人に聞く
 
 - 決めた人：人　レビュー：済
