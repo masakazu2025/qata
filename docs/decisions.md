@@ -9,6 +9,15 @@ AI や人が決めたことと、その理由を残します。人はここを�
 
 ---
 
+## D31. 現場の知識は docs/knowledge/ に、四つのファイルで積み上げる
+
+- 決めた人：AI　レビュー：未（中身は人が確かめる。ユースケースの U2・U3 は案）
+- 置き場所は親の [docs/knowledge/](knowledge/)。用語集・業務アプリの性質・自動化で困ること・想定するユースケースの四つに分けた。入口の README に、decisions・ideas との違いを図で置いた。
+- 知識（分かったこと）は knowledge に書き、decisions（決めたこと）と ideas（改善案）からはリンクで指す。ideas にあった同時押し・読み方・立て直しの知識は、knowledge に移した。decisions は記録なので書き換えない。
+- 言葉は用語集に合わせ、新しく使い始めたら足す（[knowledge.md](../.claude/rules/qata/knowledge.md)）。人から出た知識は、セッションの終わりに一般化して書く（[session-end](../.claude/skills/session-end/SKILL.md) の 5）。
+- 子の CLAUDE.md にも knowledge.md を読み込ませた。
+- 理由：ideas は使ったら消え、decisions は理由の記録なので、どちらも知識を積み上げる場所にならない（最初の周回の振り返り）。
+
 ## D30. 次の周回は、デモの完了を先にし、土台の直しは最低限にする
 
 - 決めた人：人　レビュー：済
