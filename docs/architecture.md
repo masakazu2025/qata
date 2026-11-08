@@ -44,24 +44,19 @@ qata-web ─────────REST──────┘                ←
 
 ## 境目（契約）
 
-部品の間でやり取りするデータの形を契約とし、親に JSON Schema で置く。**正は親だけ。**
+部品の間でやり取りするデータの形を契約とし、親の [contracts/](../contracts/) に JSON Schema で置く。**正は親だけ。** 中身と流れは [contracts/README.md](../contracts/README.md) を見る。
 
-決める必要がある契約：
+契約の一覧（PoC の間は仮に確定）：
 
 - テストケースの形式（手順・確認事項）
 - 画面の部品の辞書の形式
 - runner への命令と、runner からの結果（スクショを含む）
-- server の API（FastAPI が出す OpenAPI から web の型を生成する）
+- server の API（親の `openapi.yaml` が正。web はここから型を生成し、server は FastAPI が出す OpenAPI がこれと合うことをテストで確かめる）
 - server の MCP の道具（名前・入力・出力）
 
 各部品は契約から型（pydantic / TypeScript）を生成し、生成物もコミットする。生成物が契約と一致しているかをテストで確かめる。
 
-契約そのもの（JSON Schema）はまだ作っていません。
-
 ## 未決事項
 
 - `qata` の名前が GitHub / PyPI / npm で使われていないかの確認
-- 確認事項 1 種類の具体的な手段（電卓の表示をどう読み取るか）
-- スクショの保存先と形式
-- 部品の辞書の置き場所（親か server か）
 - デモで使う MCP のクライアント（Claude Desktop か Claude Code か）
