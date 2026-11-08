@@ -11,9 +11,10 @@ AI や人が決めたことと、その理由を残します。人はここを�
 
 ## D23. Git の決まり
 
-- 決めた人：人（ブランチを切る）・AI（細部）　レビュー：未
-- `main` に直接コミットせず、タスクごとに `<種類>/<内容>` のブランチを切る。push と pull request は人が言ったときだけ。ルールは [git.md](../.claude/rules/general/git.md)。
-- 理由：これまで `main` に直接コミットしていたが、決まりがなかった。push は外に出ることなので、[autonomy.md](../.claude/rules/general/autonomy.md) に合わせて人が決める。
+- 決めた人：人（GitHub Flow、pull request、1 タスク 1 セッション 1 コミット以上）・AI（細部）　レビュー：済
+- GitHub Flow。`main` に直接コミットせず、タスクごとに `<種類>/<内容>` のブランチを切り、pull request で `main` に入れる。1 セッションに少なくとも 1 コミットし、要るときは分ける。ルールは [git.md](../.claude/rules/general/git.md)。
+- PoC の間は、マージは AI がしてよい。中身は人がセッションの中で見ているので、pull request は記録として残す。
+- 理由：これまで `main` に直接コミットしていたが、決まりがなかった。gitflow の `develop`・`release` は、版を決めて出すものがない今は手間が増えるだけ。版が要るようになったら（内製に派生させるときなど）見直す。
 - AI が仮に決めたことで問題が出たら、PoC が終わったときにまとめて振り返る（人）。[process.md](process.md) の振り返りの項目に足した。
 
 ## D22. 契約の検査を親に置く
