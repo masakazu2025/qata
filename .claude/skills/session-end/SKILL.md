@@ -13,4 +13,5 @@ description: セッションの終わりに、関門を通し、タスク・決�
 3. このセッションで自分で決めたことを、`docs/decisions.md` の上に足す（決めた人：AI、レビュー：未）。
 4. 途中で出てきた、今のスコープの外の思いつきを `docs/ideas.md` に書く。子のリポジトリで、全体に関わる issue や idea が出たときは、親に上げる（`.claude/rules/general/parent-and-children.md`）。
 5. `docs/log.md` のいちばん上に「日付：やったこと」を一行足す。
-6. 人への報告では、レビューしてほしいもの（「レビュー：未」で今回足したもの）と、人に聞くこと（あれば）だけを伝える。質問の出し方は `.claude/rules/general/autonomy.md` に従う。
+6. `.claude/rules/general/git.md` に沿って、コミットし、ブランチを push して pull request を作り、マージする。
+7. 人への報告では、レビューしてほしいもの（「レビュー：未」で今回足したもの）と、人に聞くこと（あれば）だけを伝える。質問の出し方は `.claude/rules/general/autonomy.md` に従う。
