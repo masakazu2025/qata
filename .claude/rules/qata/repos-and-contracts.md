@@ -6,7 +6,8 @@
 
 - 親 `qata` と、部品 `qata-runner`・`qata-server`・`qata-web` は、それぞれ別のリポジトリにする。作業フォルダはリポジトリにしない。
 - 共通のルールや手順は、親の中に置く。部品のリポジトリや作業フォルダの直下には置かない。
-- 部品の CLAUDE.md には「契約と全体の要件は `../qata/` を見る」と書く。
+- 親は `qata`、子は `qata-runner`・`qata-server`・`qata-web`（親と子の決まりは `general/parent-and-children.md`）。
+- 部品の CLAUDE.md には「契約と全体の要件は `../qata/` を見る」と書く。全体に関わる issue と idea は、`../qata/docs/` に上げる。
 
 ## 契約
 
