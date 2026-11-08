@@ -29,4 +29,4 @@
 
 ## 人の判断待ち
 
-- **GitHub に `qata-server` のリポジトリを作るか**（公開か非公開か）。作るまで、ブランチ `feature/contract-checks` はローカルにあり、pull request とマージは止めている。
+いまはありません。
