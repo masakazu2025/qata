@@ -6,6 +6,7 @@ Windows のデスクトップアプリに対して、日本語の手順からテ
 - スコープ：[docs/scope.md](docs/scope.md)
 - 構成と契約：[docs/architecture.md](docs/architecture.md)
 - 進め方：[docs/process.md](docs/process.md)
+- タスク：[docs/tasks.md](docs/tasks.md)
 - 決めたこと：[docs/decisions.md](docs/decisions.md)
 - 作業の記録：[docs/log.md](docs/log.md)
 - ルール：[.claude/rules/](.claude/rules/)（[general/](.claude/rules/general/) は汎用、[qata/](.claude/rules/qata/) は固有）
