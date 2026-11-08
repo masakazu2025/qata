@@ -22,7 +22,7 @@ PoC です。**Windows の電卓に対して、日本語の手順から、操作
 | `qata-server` | 部品の辞書の提供、テストケースの検証・登録、実行の指揮、結果の保存。入口は REST と MCP | Python、FastAPI、pydantic、MCP の Python SDK、SQLite |
 | `qata-web` | テストケースの確認・管理、実行、結果の閲覧 | TypeScript、React（Vite） |
 
-部品のリポジトリはまだありません。部品の間の契約と全体の要件は、このリポジトリが正です。
+部品のリポジトリは、`qata-server` から順に作っています。部品の間の契約と全体の要件は、このリポジトリが正です。
 
 ## 文書
 
