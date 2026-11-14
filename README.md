@@ -11,7 +11,7 @@ Windows のデスクトップアプリ（最終的には、店舗などで使う
 
 ## いまの段階
 
-PoC です。**Windows の電卓に対して、日本語の手順から、操作の自動実行、結果のスクショ表示まで、一本通るデモ** を目指しています。
+PoC です。**Windows の電卓に対して、日本語の手順から、操作の自動実行、結果のスクショ表示まで、一本通るデモ** ができました（2026-11-08）。いまは振り返りと QA の周回です。
 
 ## リポジトリ
 
@@ -22,7 +22,11 @@ PoC です。**Windows の電卓に対して、日本語の手順から、操作
 | `qata-server` | 部品の辞書の提供、テストケースの検証・登録、実行の指揮、結果の保存。入口は REST と MCP | Python、FastAPI、pydantic、MCP の Python SDK、SQLite |
 | `qata-web` | テストケースの確認・管理、実行、結果の閲覧 | TypeScript、React（Vite） |
 
-部品のリポジトリは、`qata-server` から順に作っています。部品の間の契約と全体の要件は、このリポジトリが正です。
+部品の間の契約と全体の要件は、このリポジトリが正です。
+
+## やることの管理
+
+やることは GitHub の issue で管理しています。一つの部品で閉じるものはその部品のリポジトリに、部品をまたぐものと全体の判断はこのリポジトリに置きます。使い方は [.claude/rules/general/issues.md](.claude/rules/general/issues.md) です。
 
 ## 文書
 
@@ -31,4 +35,6 @@ PoC です。**Windows の電卓に対して、日本語の手順から、操作
 - [docs/architecture.md](docs/architecture.md)：構成と境目（契約）
 - [docs/process.md](docs/process.md)：開発の進め方
 - [docs/decisions.md](docs/decisions.md)：決めたことと、その理由
-- [docs/ideas.md](docs/ideas.md)：次回以降の改善案
+- [docs/ideas.md](docs/ideas.md)：まだやると決めていない改善案（やると決めたら issue にする）
+- [docs/retro.md](docs/retro.md)：周回ごとの振り返り
+- [docs/knowledge/](docs/knowledge/)：現場の知識（一般化したもの）
