@@ -2,7 +2,7 @@
 
 作業で守る決まりはルール（[.claude/rules/](../.claude/rules/)）に、場面ごとの手順はスキル（[.claude/skills/](../.claude/skills/)）に置いています。この文書には、プロジェクト全体の進め方を書きます。
 
-- 汎用のルール：[general/working.md](../.claude/rules/general/working.md)（原則）、[general/git.md](../.claude/rules/general/git.md)（ブランチとコミット）、[general/autonomy.md](../.claude/rules/general/autonomy.md)（AI の裁量、質問の出し方）、[general/rules-and-skills.md](../.claude/rules/general/rules-and-skills.md)（ルールとスキルの置き方）、[general/parent-and-children.md](../.claude/rules/general/parent-and-children.md)（親と子のリポジトリ、issue と idea）
+- 汎用のルール：[general/working.md](../.claude/rules/general/working.md)（原則）、[general/git.md](../.claude/rules/general/git.md)（ブランチとコミット）、[general/autonomy.md](../.claude/rules/general/autonomy.md)（AI の裁量、質問の出し方）、[general/rules-and-skills.md](../.claude/rules/general/rules-and-skills.md)（ルールとスキルの置き方）、[general/parent-and-children.md](../.claude/rules/general/parent-and-children.md)（親と子のリポジトリ、issue と idea）、[general/issues.md](../.claude/rules/general/issues.md)（やることの持ち方）
 - qata 固有のルール：[qata/repos-and-contracts.md](../.claude/rules/qata/repos-and-contracts.md)
 - 汎用のスキル：[session-start](../.claude/skills/session-start/SKILL.md)、[session-end](../.claude/skills/session-end/SKILL.md)
 

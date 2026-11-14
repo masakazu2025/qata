@@ -22,7 +22,7 @@
 
 - 汎用のものには、プロジェクトの名前・部品・技術を書かない。そのままほかのプロジェクトに写せる形にする。
 - 新しく足すときは、まずどちらかを決める。迷ったら固有の側に置く。あとで汎用にできると分かったら移す。
-- 汎用のものが前提にしてよい文書は、どのプロジェクトでも同じ名前で置く次のものだけ：`docs/scope.md`・`docs/tasks.md`・`docs/issues.md`・`docs/decisions.md`・`docs/log.md`・`docs/ideas.md`。
+- 汎用のものが前提にしてよい文書は、どのプロジェクトでも同じ名前で置く次のものだけ：`docs/scope.md`・`docs/decisions.md`・`docs/ideas.md`。やることは GitHub の issue に置く（`issues.md`）。
 
 ## 変えるとき
 

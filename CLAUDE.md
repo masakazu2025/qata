@@ -6,11 +6,9 @@ Windows のデスクトップアプリに対して、日本語の手順からテ
 - スコープ：[docs/scope.md](docs/scope.md)
 - 構成と契約：[docs/architecture.md](docs/architecture.md)
 - 進め方：[docs/process.md](docs/process.md)
-- タスク：[docs/tasks.md](docs/tasks.md)
-- 全体に関わる問題：[docs/issues.md](docs/issues.md)
+- やること：GitHub の issue。優先順はボード <https://github.com/users/masakazu2025/projects/4>（番号 4、使い方は [.claude/rules/general/issues.md](.claude/rules/general/issues.md)）
 - 改善案：[docs/ideas.md](docs/ideas.md)
 - 決めたこと：[docs/decisions.md](docs/decisions.md)
-- 作業の記録：[docs/log.md](docs/log.md)
 - 振り返り：[docs/retro.md](docs/retro.md)
 - 現場の知識（用語集・業務アプリの性質・自動化で困ること・ユースケース）：[docs/knowledge/](docs/knowledge/)
 - ルール：[.claude/rules/](.claude/rules/)（[general/](.claude/rules/general/) は汎用、[qata/](.claude/rules/qata/) は固有）

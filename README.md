@@ -30,8 +30,5 @@ PoC です。**Windows の電卓に対して、日本語の手順から、操作
 - [docs/scope.md](docs/scope.md)：今回のスコープとデモの完了条件
 - [docs/architecture.md](docs/architecture.md)：構成と境目（契約）
 - [docs/process.md](docs/process.md)：開発の進め方
-- [docs/tasks.md](docs/tasks.md)：これからやること（優先順）
 - [docs/decisions.md](docs/decisions.md)：決めたことと、その理由
-- [docs/log.md](docs/log.md)：作業の記録
-- [docs/issues.md](docs/issues.md)：全体に関わる、いま困っている問題
 - [docs/ideas.md](docs/ideas.md)：次回以降の改善案
