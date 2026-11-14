@@ -106,6 +106,6 @@
 | 人とAIの分担。人は仕様の切り方・ユースケース・文書の管理、シーケンス図などの構造の図を持つ。コードの確かさは、上位から作ったテストと、規約・パターン・技術のレビューで押さえ、人は見ない | D29、[ideas.md](ideas.md) |
 | 人に見せるものは表と図を先にする。図は Mermaid | D29、[autonomy.md](../.claude/rules/general/autonomy.md) |
 | 機能を足して構造が変わるときは、AI が影響を図にし、構想に関わる構造だけ人と決める | D29、[autonomy.md](../.claude/rules/general/autonomy.md) |
-| ideas（使ったら消える改善案）とは別に、現場の知識を積み上げる層を作る。まず用語集から | [tasks.md](tasks.md) の 1 |
+| ideas（使ったら消える改善案）とは別に、現場の知識を積み上げる層を作る。まず用語集から | 当時の tasks.md の 1 |
 | 現場の知識は公開しない。一般化できるものだけ書く。いまの文書の POS の話は一般化した | D28、[knowledge.md](../.claude/rules/qata/knowledge.md) |
 | 振り返りでは、「直した」回数と、すり抜けた問題の数を並べて見る | [ideas.md](ideas.md) |

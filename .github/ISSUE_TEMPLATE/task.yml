@@ -1,0 +1,20 @@
+name: やること
+description: やると決めて、すぐ手をつけられるもの
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: やること
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: 終わりの条件
+      description: 何が確かめられたら終わりか。テストや目で見て分かる形で書く
+    validations:
+      required: true
+  - type: textarea
+    id: memo
+    attributes:
+      label: メモ
