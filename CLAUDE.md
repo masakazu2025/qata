@@ -6,7 +6,7 @@ Windows のデスクトップアプリに対して、日本語の手順からテ
 - スコープ：[docs/scope.md](docs/scope.md)
 - 構成と契約：[docs/architecture.md](docs/architecture.md)
 - 進め方：[docs/process.md](docs/process.md)
-- やること：GitHub の issue（使い方は [.claude/rules/general/issues.md](.claude/rules/general/issues.md)）
+- やること：GitHub の issue。優先順はボード <https://github.com/users/masakazu2025/projects/4>（番号 4、使い方は [.claude/rules/general/issues.md](.claude/rules/general/issues.md)）
 - 改善案：[docs/ideas.md](docs/ideas.md)
 - 決めたこと：[docs/decisions.md](docs/decisions.md)
 - 振り返り：[docs/retro.md](docs/retro.md)
