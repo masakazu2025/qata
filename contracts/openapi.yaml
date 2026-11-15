@@ -152,7 +152,7 @@ paths:
         "404":
           $ref: "#/components/responses/not_found"
         "409":
-          description: いまは実行できない。人の確認待ち（review_status が pending、error.code は review_pending）か、登録のあとで部品の辞書が変わり、いまの辞書に合わない（error.code は testcase_out_of_date）
+          description: いまは実行できない。人の確認待ち（review_status が pending、error.code は review_pending）か、登録のあとで部品の辞書が変わり、いまの辞書に合わない（error.code は testcase_out_of_date）か、runner がほかの実行の最中（error.code は runner_busy。実行の結果は残さない）
           content:
             application/json:
               schema:
