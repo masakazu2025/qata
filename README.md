@@ -9,9 +9,9 @@ Windows のデスクトップアプリ（最終的には、店舗などで使う
 1. **ツール本体**：日本語の手順と確認事項からテストケースを作り、登録・実行し、結果を閲覧できるようにする。
 2. **開発の仕組み**：AI に要件 → 設計 → 実装 → テストを回させる仕組み（rules・skills・関門）を作る。ツール本体と同じくらい、これも成果物です。
 
-## いまの段階
+## いまの周回
 
-PoC（**Windows の電卓に対して、日本語の手順から、操作の自動実行、結果のスクショ表示まで、一本通るデモ**）が終わりました（2026-11-08）。いまは中期目標の段階 1（管理の拡張）です。段階の並びは [docs/roadmap.md](docs/roadmap.md)、いまの段階の範囲は [docs/scope.md](docs/scope.md) にあります。
+PoC（**Windows の電卓に対して、日本語の手順から、操作の自動実行、結果のスクショ表示まで、一本通るデモ**）が終わりました（2026-11-08）。いまは 3 周目の範囲を決めています。中期目標（軸と、周回の進め方）は [docs/roadmap.md](docs/roadmap.md)、いまの周回の範囲は [docs/scope.md](docs/scope.md) にあります。
 
 ## リポジトリ
 
@@ -31,8 +31,8 @@ PoC（**Windows の電卓に対して、日本語の手順から、操作の自�
 ## 文書
 
 - [docs/vision.md](docs/vision.md)：構想（E2E のモジュールの目標と、全体の中の位置づけ）
-- [docs/roadmap.md](docs/roadmap.md)：中期目標（vision に向かう段階と、各段階の完了の条件）
-- [docs/scope.md](docs/scope.md)：いまの段階の範囲
+- [docs/roadmap.md](docs/roadmap.md)：中期目標（vision に向かう軸と、周回の進め方）
+- [docs/scope.md](docs/scope.md)：いまの周回の範囲
 - [docs/architecture.md](docs/architecture.md)：構成と境目（契約）
 - [docs/process.md](docs/process.md)：開発の進め方
 - [docs/decisions.md](docs/decisions.md)：決めたことと、その理由
