@@ -84,7 +84,7 @@
     },
     {
       "name": "run_testcase",
-      "description": "登録されたテストケースを実行し、終わるまで待って結果を返す。人の確認待ち（review_status が pending）のものと、登録のあとで部品の辞書が変わり、いまの辞書に合わなくなったものは実行できない。スクショは web で見る。",
+      "description": "登録されたテストケースを実行し、終わるまで待って結果を返す。人の確認待ち（review_status が pending）のものと、登録のあとで部品の辞書が変わり、いまの辞書に合わなくなったものは実行できない。runner がほかの実行の最中なら、実行せずに runner_busy のエラーを返す（結果は残さない）。終わってからもう一度呼ぶ。スクショは web で見る。",
       "inputSchema": {
         "type": "object",
         "properties": {

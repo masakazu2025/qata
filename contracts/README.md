@@ -41,6 +41,7 @@ web ──REST──→ server：testcase_record・run・スクショ
 ### runner
 
 - 入口は `POST /runs`（本文 runner-command、応答 runner-result）。実行が終わるまで待って返す。
+- 一度に一つの実行しか受け付けない（1 台の PC の画面で本物のアプリを動かすため）。実行中に次の命令が来たら、待たずに 409 で断り、本文は共通の部品 `error`（`code` は `runner_busy`）にする。
 - 実行のたびにアプリを起動し直し、命令に大きさがあればウィンドウをその大きさにそろえてから始める。
 - ステップごとにスクショを撮る。範囲は命令の `screenshot.scope`（ウィンドウだけか、すべての画面か）。
 - 判定はしない。読んだ文字をそのまま返す。文字の読み方は `read_text` の `source.method` で選ぶ（いまは `uia` だけ）。
