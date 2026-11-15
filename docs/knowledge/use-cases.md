@@ -41,4 +41,4 @@ sequenceDiagram
 ```
 
 - U5 と、U3 を「設計書など」「人も作る」に広げたものは、機能のブレスト（[qata#34](https://github.com/masakazu2025/qata/issues/34)）から出しました。qata の範囲と、外で行うことの分け方は D39。
-- U2・U3 は AI の案です。[vision.md](../vision.md) の「できるようにしたいこと」と、[app-traits.md](app-traits.md) から出しました。
+- U2・U3 は AI の案です。[vision.md](../vision.md) の当時の「できるようにしたいこと」（いまは「届いたと言える状態」）と、[app-traits.md](app-traits.md) から出しました。
