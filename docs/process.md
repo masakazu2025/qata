@@ -30,7 +30,7 @@
 
 - 人が関門をすり抜けた問題を見つけたら、それをルールや関門に落とす。
 - 落とすときは、ルールかスキルか、汎用か qata 固有かを決めて置く（[general/rules-and-skills.md](../.claude/rules/general/rules-and-skills.md)）。
-- ルールを AI が自分で見直して改善する仕組みは、今回のスコープ外です（[scope.md](scope.md)）。
+- ルールを AI が自分で見直して改善する仕組みは、いまの段階の範囲の外です（[scope.md](scope.md)）。
 
 ## 振り返り
 

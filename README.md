@@ -11,13 +11,13 @@ Windows のデスクトップアプリ（最終的には、店舗などで使う
 
 ## いまの段階
 
-PoC です。**Windows の電卓に対して、日本語の手順から、操作の自動実行、結果のスクショ表示まで、一本通るデモ** ができました（2026-11-08）。いまは振り返りと QA の周回です。
+PoC（**Windows の電卓に対して、日本語の手順から、操作の自動実行、結果のスクショ表示まで、一本通るデモ**）が終わりました（2026-11-08）。いまは中期目標の段階 1（管理の拡張）です。段階の並びは [docs/roadmap.md](docs/roadmap.md)、いまの段階の範囲は [docs/scope.md](docs/scope.md) にあります。
 
 ## リポジトリ
 
 | リポジトリ | 役割 | 技術 |
 | --- | --- | --- |
-| `qata`（ここ） | 目的・スコープ・デモの完了条件・契約・共通の作り方（rules / skills）・ideas | Markdown、JSON Schema |
+| `qata`（ここ） | 目的・中期目標・スコープ・契約・共通の作り方（rules / skills）・ideas | Markdown、JSON Schema |
 | `qata-runner` | Windows 上で操作を実行し、結果とスクショを返す | Python、pywinauto、FastAPI |
 | `qata-server` | 部品の辞書の提供、テストケースの検証・登録、実行の指揮、結果の保存。入口は REST と MCP | Python、FastAPI、pydantic、MCP の Python SDK、SQLite |
 | `qata-web` | テストケースの確認・管理、実行、結果の閲覧 | TypeScript、React（Vite） |
@@ -31,7 +31,8 @@ PoC です。**Windows の電卓に対して、日本語の手順から、操作
 ## 文書
 
 - [docs/vision.md](docs/vision.md)：構想（E2E のモジュールの目標と、全体の中の位置づけ）
-- [docs/scope.md](docs/scope.md)：今回のスコープとデモの完了条件
+- [docs/roadmap.md](docs/roadmap.md)：中期目標（vision に向かう段階と、各段階の完了の条件）
+- [docs/scope.md](docs/scope.md)：いまの段階の範囲
 - [docs/architecture.md](docs/architecture.md)：構成と境目（契約）
 - [docs/process.md](docs/process.md)：開発の進め方
 - [docs/decisions.md](docs/decisions.md)：決めたことと、その理由

@@ -4,7 +4,7 @@
 
 | リポジトリ | 役割 | 技術 |
 | --- | --- | --- |
-| `qata`（親） | 目的・スコープ・デモの完了条件・契約・共通の作り方（rules / skills）・ideas | Markdown、JSON Schema |
+| `qata`（親） | 目的・中期目標・スコープ・契約・共通の作り方（rules / skills）・ideas | Markdown、JSON Schema |
 | `qata-runner` | Windows 上で操作を実行し、結果とスクショを返す | Python、pywinauto、FastAPI |
 | `qata-server` | 部品の辞書の提供、テストケースの検証・登録、実行の指揮、結果の保存。入口は REST と MCP | Python、FastAPI、pydantic、MCP の Python SDK、SQLite |
 | `qata-web` | テストケースの確認・管理、実行、結果の閲覧 | TypeScript、React（Vite） |
