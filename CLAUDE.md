@@ -4,7 +4,7 @@ Windows のデスクトップアプリに対して、日本語の手順からテ
 
 - 概要：[README.md](README.md)
 - 中期目標：[docs/roadmap.md](docs/roadmap.md)
-- いまの周回の範囲：[docs/scope.md](docs/scope.md)
+- いまのスコープ：[docs/scope.md](docs/scope.md)
 - 構成と契約：[docs/architecture.md](docs/architecture.md)
 - 進め方：[docs/process.md](docs/process.md)
 - やること：GitHub の issue。優先順はボード <https://github.com/users/masakazu2025/projects/4>（番号 4、使い方は [.claude/rules/general/issues.md](.claude/rules/general/issues.md)）
