@@ -30,7 +30,7 @@ PoC です。**Windows の電卓に対して、日本語の手順から、操作
 
 ## 文書
 
-- [docs/vision.md](docs/vision.md)：構想（全体像）
+- [docs/vision.md](docs/vision.md)：構想（E2E のモジュールの目標と、全体の中の位置づけ）
 - [docs/scope.md](docs/scope.md)：今回のスコープとデモの完了条件
 - [docs/architecture.md](docs/architecture.md)：構成と境目（契約）
 - [docs/process.md](docs/process.md)：開発の進め方
