@@ -21,10 +21,6 @@
   - 親の契約を変える pull request では、子の CI が回らない（子は親の main を読む）。契約の変更が子を壊しても、子の次の pull request まで気づかない。
   - 部品をまたぐ変更は、server・runner を先にマージしないと web の e2e が通らない（e2e は隣の main を使う）。いまは順番で済ませている。
 
-## 画面に出る文言
-
-- **server と runner の文言を、テスターも読める形にそろえる**（qata-server#17 で、人の指摘から）。何が起きたかを先に書き、契約の言葉（「形式が契約に合わない」など）や JSON のパスは「詳しく」の中に入れる（D47）。いまは `invalid_runner_result` と `internal_error` だけを直した。まずは決まりにして（ルールか用語集）、そのあと文言を一つずつ見直す。
-
 ## 別の AI のレビューで見つかったもの（2026-11-15、[qata#23](https://github.com/masakazu2025/qata/issues/23)）
 
 一覧は [reviews/2026-11-15.md](reviews/2026-11-15.md)。振り分けの基準（[findings.md](../.claude/rules/qata/findings.md)）で、テストの結果を誤らせず、普通に使って起きないものをここに置いた。その場所を触るときに一緒に直す。issue にしたものは、一覧の「扱い」の列にある。
