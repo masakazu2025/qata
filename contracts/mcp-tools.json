@@ -1,5 +1,5 @@
 {
-  "description": "server が MCP で出す道具。name・description・inputSchema・outputSchema は MCP の Tool の定義にそのまま使う。$ref は schemas/ の JSON Schema を指す（server が展開して出す）。道具の結果は structuredContent に outputSchema の形で入れる。",
+  "description": "server が MCP で出す道具。name・description・inputSchema・outputSchema は MCP の Tool の定義にそのまま使う。$ref は schemas/ の JSON Schema を指す（server が展開して出す）。道具の結果は structuredContent に outputSchema の形で入れる。失敗したら isError の結果にし、文字の中身を schemas/server.schema.json の error_response の形にする。server の中で想定していない誤りが起きたときの code は internal_error。",
   "tools": [
     {
       "name": "list_apps",

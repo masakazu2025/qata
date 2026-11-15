@@ -54,6 +54,7 @@ web ──REST──→ server：testcase_record・run・スクショ
 - スクショの範囲は、アプリごとの設定で決める。
 - `needs_review` が true のテストケースは `pending` で登録し、承認されるまで実行しない。false なら `not_required`。
 - 確認事項が合わなくても、ステップは最後まで実行する（runner はまとめて実行するため）。runner が止まったら、残りは `skipped`。
+- 想定していない誤りが起きても、REST は 500、MCP は isError の結果で、どちらも error_response の形（`code` は `internal_error`）で返す。理由が分かるように、例外の種類を `message` に入れる。
 - FastAPI が出す OpenAPI が [openapi.yaml](openapi.yaml) と合うこと、MCP で出す道具が [mcp-tools.json](mcp-tools.json) と合うことを、テストで確かめる。
 
 ### web

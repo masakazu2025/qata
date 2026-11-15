@@ -19,6 +19,8 @@ paths:
                 type: array
                 items:
                   $ref: "schemas/server.schema.json#/$defs/app_summary"
+        "500":
+          $ref: "#/components/responses/internal_error"
   /apps/{app_id}/parts:
     get:
       operationId: getPartDictionary
@@ -34,6 +36,8 @@ paths:
                 $ref: "schemas/part-dictionary.schema.json"
         "404":
           $ref: "#/components/responses/not_found"
+        "500":
+          $ref: "#/components/responses/internal_error"
   /testcases/validate:
     post:
       operationId: validateTestcase
@@ -51,6 +55,8 @@ paths:
             application/json:
               schema:
                 $ref: "schemas/server.schema.json#/$defs/validation_result"
+        "500":
+          $ref: "#/components/responses/internal_error"
   /testcases:
     get:
       operationId: listTestcases
@@ -70,6 +76,8 @@ paths:
                 type: array
                 items:
                   $ref: "schemas/server.schema.json#/$defs/testcase_record"
+        "500":
+          $ref: "#/components/responses/internal_error"
     post:
       operationId: registerTestcase
       summary: テストケースを検証して登録する
@@ -92,6 +100,8 @@ paths:
             application/json:
               schema:
                 $ref: "schemas/server.schema.json#/$defs/validation_result"
+        "500":
+          $ref: "#/components/responses/internal_error"
   /testcases/{testcase_id}:
     parameters:
       - $ref: "#/components/parameters/testcase_id"
@@ -107,6 +117,8 @@ paths:
                 $ref: "schemas/server.schema.json#/$defs/testcase_record"
         "404":
           $ref: "#/components/responses/not_found"
+        "500":
+          $ref: "#/components/responses/internal_error"
     delete:
       operationId: deleteTestcase
       summary: テストケースを消す（実行の結果は残す）
@@ -115,6 +127,8 @@ paths:
           description: 消した
         "404":
           $ref: "#/components/responses/not_found"
+        "500":
+          $ref: "#/components/responses/internal_error"
   /testcases/{testcase_id}/approve:
     parameters:
       - $ref: "#/components/parameters/testcase_id"
@@ -136,6 +150,8 @@ paths:
             application/json:
               schema:
                 $ref: "schemas/server.schema.json#/$defs/error_response"
+        "500":
+          $ref: "#/components/responses/internal_error"
   /testcases/{testcase_id}/runs:
     parameters:
       - $ref: "#/components/parameters/testcase_id"
@@ -163,6 +179,8 @@ paths:
             application/json:
               schema:
                 $ref: "schemas/server.schema.json#/$defs/error_response"
+        "500":
+          $ref: "#/components/responses/internal_error"
   /runs:
     get:
       operationId: listRuns
@@ -182,6 +200,8 @@ paths:
                 type: array
                 items:
                   $ref: "schemas/server.schema.json#/$defs/run"
+        "500":
+          $ref: "#/components/responses/internal_error"
   /runs/{run_id}:
     get:
       operationId: getRun
@@ -201,6 +221,8 @@ paths:
                 $ref: "schemas/server.schema.json#/$defs/run"
         "404":
           $ref: "#/components/responses/not_found"
+        "500":
+          $ref: "#/components/responses/internal_error"
   /screenshots/{screenshot_id}:
     get:
       operationId: getScreenshot
@@ -221,6 +243,8 @@ paths:
                 contentMediaType: image/png
         "404":
           $ref: "#/components/responses/not_found"
+        "500":
+          $ref: "#/components/responses/internal_error"
 components:
   parameters:
     app_id:
@@ -238,6 +262,12 @@ components:
   responses:
     not_found:
       description: 見つからない
+      content:
+        application/json:
+          schema:
+            $ref: "schemas/server.schema.json#/$defs/error_response"
+    internal_error:
+      description: server の中で想定していない誤りが起きた（error.code は internal_error）
       content:
         application/json:
           schema:
