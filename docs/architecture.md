@@ -15,11 +15,17 @@
 
 部品のつながり：
 
-```
-AI（PoC では Claude）──MCP（HTTP）──┐
-                                    ├─→ qata-server ──命令──→ qata-runner ──操作──→ 電卓
-qata-web ─────────REST（HTTP）──────┘   （REST と MCP を     ←─結果・スクショ─┘
-                                          一つのプロセスで）
+```mermaid
+flowchart LR
+  AI["AI（PoC では Claude）"] -- "MCP（HTTP）" --> S
+  W[qata-web] -- "REST（HTTP）" --> S
+  subgraph S["qata-server（REST と MCP を一つのプロセスで）"]
+    direction TB
+    IF[interface 層：REST・MCP] --> APP[application 層]
+  end
+  S -- 命令 --> R[qata-runner]
+  R -- 結果・スクショ --> S
+  R -- 操作 --> APP2[電卓]
 ```
 
 ## 技術の土台
