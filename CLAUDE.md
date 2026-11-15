@@ -3,7 +3,8 @@
 Windows のデスクトップアプリに対して、日本語の手順からテストを作り、自動で再生し、結果を確認するツール qata の親リポジトリです。判断とプロジェクト管理に寄せ、目的・スコープ・契約・共通の作り方を置きます。コードは置きません。
 
 - 概要：[README.md](README.md)
-- スコープ：[docs/scope.md](docs/scope.md)
+- 中期目標：[docs/roadmap.md](docs/roadmap.md)
+- いまのスコープ：[docs/scope.md](docs/scope.md)
 - 構成と契約：[docs/architecture.md](docs/architecture.md)
 - 進め方：[docs/process.md](docs/process.md)
 - やること：GitHub の issue。優先順はボード <https://github.com/users/masakazu2025/projects/4>（番号 4、使い方は [.claude/rules/general/issues.md](.claude/rules/general/issues.md)）
