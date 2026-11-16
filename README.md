@@ -19,7 +19,7 @@ PoC（**Windows の電卓に対して、日本語の手順から、操作の自�
 | --- | --- | --- |
 | `qata`（ここ） | 目的・中期目標・スコープ・契約・共通の作り方（rules / skills）・ideas | Markdown、JSON Schema |
 | `qata-runner` | Windows 上で操作を実行し、結果とスクショを返す | Python、pywinauto、FastAPI |
-| `qata-server` | 部品の辞書の提供、テストケースの検証・登録、実行の指揮、結果の保存。入口は REST と MCP | Python、FastAPI、pydantic、MCP の Python SDK、SQLite |
+| `qata-server` | 部品の辞書の提供、テストケースの検証・登録、実行の指揮、結果の保存。入口は REST と MCP | Python、FastAPI、pydantic、MCP の Python SDK、SQLite・SQLAlchemy 2・Alembic |
 | `qata-web` | テストケースの確認・管理、実行、結果の閲覧 | TypeScript、React（Vite） |
 
 部品の間の契約と全体の要件は、このリポジトリが正です。
