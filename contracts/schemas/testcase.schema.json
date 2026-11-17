@@ -16,6 +16,7 @@
       "type": "string",
       "minLength": 1
     },
+    "tags": { "$ref": "common.schema.json#/$defs/tags" },
     "needs_review": {
       "description": "実行の前に、人の確認を要るとするか（web のチェックボックス）。true なら、人が承認するまで実行できない。",
       "type": "boolean"
