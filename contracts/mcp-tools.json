@@ -62,12 +62,12 @@
     },
     {
       "name": "list_testcases",
-      "description": "登録されたテストケースの一覧を新しい順に返す。tags を指定すると、そのタグを全部持つものだけを返す（文字の完全な一致）。",
+      "description": "登録されたテストケースの一覧を新しい順に返す。tags を指定すると、そのタグを全部持つものだけを返す（文字の完全な一致）。tags を省いたときと空の並びのときは、タグで絞り込まない。",
       "inputSchema": {
         "type": "object",
         "properties": {
           "app_id": { "$ref": "schemas/common.schema.json#/$defs/app_id" },
-          "tags": { "$ref": "schemas/common.schema.json#/$defs/tags" }
+          "tags": { "$ref": "schemas/common.schema.json#/$defs/tag_filter" }
         },
         "additionalProperties": false
       },
