@@ -67,6 +67,14 @@ paths:
           required: false
           schema:
             $ref: "schemas/common.schema.json#/$defs/app_id"
+        - name: tag
+          in: query
+          required: false
+          description: 指定したタグを全部持つものだけを返す。タグ一つごとに繰り返す（例：?tag=機能:加算&tag=設計書:電卓の基本操作）。一致は文字の完全な一致。同じタグの重なりは一つと見なす。指定しなければ、タグで絞り込まない。
+          style: form
+          explode: true
+          schema:
+            $ref: "schemas/common.schema.json#/$defs/tag_filter"
       responses:
         "200":
           description: 一覧
