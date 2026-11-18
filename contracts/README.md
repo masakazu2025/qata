@@ -1,14 +1,16 @@
 # 契約
 
-部品の間でやり取りするデータの形です。**正はここだけ。** 部品はここから型を生成し、生成物もコミットします（[repos-and-contracts.md](../.claude/rules/qata/repos-and-contracts.md)）。
+部品の間でやり取りするデータの形です。**正はここだけ。** 部品はここから型を生成し、生成物もコミットします（[repos-and-contracts.md](https://github.com/masakazu2025/qata/blob/main/.claude/rules/qata/repos-and-contracts.md)）。
 
-PoC の間は仮に確定しています。変えるときは [decisions.md](../docs/decisions.md) に残します。
+部品のリポジトリには、この `contracts/` の写しがあります。写しの中から親の文書を指すリンクは、親のリポジトリの URL にしています。
+
+PoC の間は仮に確定しています。変えるときは [decisions.md](https://github.com/masakazu2025/qata/blob/main/docs/decisions.md) に残します。
 
 ## 版
 
 - いまの版は [VERSION](VERSION)、版ごとの変更は [CHANGELOG.md](CHANGELOG.md) にあります。
 - 契約を変える pull request では、同じ pull request の中で版を上げ、変更の記録を書きます。マージしたら `contracts-v<版>` のタグを付けます。
-- 部品は、タグからその版の契約を自分のリポジトリに写して読みます。上げ方と持ち方は [repos-and-contracts.md](../.claude/rules/qata/repos-and-contracts.md) の「契約の版」にあります。
+- 部品は、タグからその版の契約を自分のリポジトリに写して読みます。上げ方と持ち方は [repos-and-contracts.md](https://github.com/masakazu2025/qata/blob/main/.claude/rules/qata/repos-and-contracts.md) の「契約の版」にあります。
 
 ## ファイル
 
@@ -24,7 +26,7 @@ PoC の間は仮に確定しています。変えるときは [decisions.md](../
 
 - JSON Schema は draft 2020-12。ファイルの間は相対パスの `$ref` でつなぐ。
 - 例は [examples/](examples/) に置く（電卓で 1 + 2 = 3 を確かめる流れ）。座標は仮の値。
-- 部品の辞書の契約は、AI と web に見せる部分（名前・説明・使えるアクション）だけ。名前を具体的な操作に変える規則は server の変換の枠に置く（[D14](../docs/decisions.md)）。
+- 部品の辞書の契約は、AI と web に見せる部分（名前・説明・使えるアクション）だけ。名前を具体的な操作に変える規則は server の変換の枠に置く（[D14](https://github.com/masakazu2025/qata/blob/main/docs/decisions.md)）。
 
 ## データの流れ
 
