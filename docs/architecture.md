@@ -88,6 +88,8 @@ flowchart LR
 
 部品の間でやり取りするデータの形を契約とし、親の [contracts/](../contracts/) に JSON Schema で置く。**正は親だけ。** 中身と流れは [contracts/README.md](../contracts/README.md) を見る。
 
+契約には版がある（[contracts/VERSION](../contracts/VERSION)）。子は親のタグからその版の契約を自分のリポジトリに写して持ち、自分の pull request で版を上げるまで、その写しを読む（[repos-and-contracts.md](../.claude/rules/qata/repos-and-contracts.md) の「契約の版」）。親の `main` が進んでも、子の `main` は落ちない。
+
 契約の一覧（PoC の間は仮に確定）：
 
 - テストケースの形式（手順・確認事項）
