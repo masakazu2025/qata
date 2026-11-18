@@ -4,6 +4,12 @@
 
 PoC の間は仮に確定しています。変えるときは [decisions.md](../docs/decisions.md) に残します。
 
+## 版
+
+- いまの版は [VERSION](VERSION)、版ごとの変更は [CHANGELOG.md](CHANGELOG.md) にあります。
+- 契約を変える pull request では、同じ pull request の中で版を上げ、変更の記録を書きます。マージしたら `contracts-v<版>` のタグを付けます。
+- 部品は、タグからその版の契約を自分のリポジトリに写して読みます。上げ方と持ち方は [repos-and-contracts.md](../.claude/rules/qata/repos-and-contracts.md) の「契約の版」にあります。
+
 ## ファイル
 
 | 契約 | ファイル | 使う部品 |
