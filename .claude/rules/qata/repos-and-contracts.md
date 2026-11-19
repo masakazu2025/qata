@@ -22,7 +22,7 @@
 - 版は `contracts/VERSION` に書き、マージしたら `contracts-v<版>` のタグを付ける（例：`contracts-v1.5.0`）。変更の記録は `contracts/CHANGELOG.md`。
 - 子は、読む版を自分のリポジトリに持ち、型の生成・テスト・CI・実行のどれも、その版の契約を読む。隣に並べた親（`../qata/`）の、その時の中身は読まない。
 - web の端から端までのテストは server と runner を動かすので、server と runner を先に上げる。
-- 版の固定を入れる作業は [qata#69](https://github.com/masakazu2025/qata/issues/69)。入るまでは、`general/git.md` の「版の固定がまだ入っていない読む側では」に従う。
+- 三つの子は、どれも版の固定に移っている（[qata#69](https://github.com/masakazu2025/qata/issues/69)）。だから親の契約の pull request は、子を待たずにマージしてよい（`general/git.md` の「リポジトリをまたぐとき」）。
 
 ### 子の持ち方
 
